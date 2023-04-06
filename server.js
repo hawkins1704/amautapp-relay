@@ -5,7 +5,9 @@ const port=8080;
 
 
 app.use(Gun.serve);
-
+app.get('/',(req,res)=>{
+    res.send(`Relay peer en línea en el puerto ${port}`);
+})
 const server=app.listen(port,()=>{
     console.log(`Listening at port localhost:${port}`);
 })
