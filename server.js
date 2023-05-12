@@ -13,8 +13,10 @@ const server = app.listen(port, () => {
 });
 
 const gun = Gun({ file:'db/data', web: server });
-var cont = 0;
 
-gun.on("in", (msg) => {
-    console.log("Conexión entrante:", ++cont);
-});
+
+// var cont = 0;
+
+// gun.on("in", (msg) => {
+//     console.log("Conexión entrante:", ++cont);
+// });
