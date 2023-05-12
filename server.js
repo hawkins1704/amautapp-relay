@@ -12,7 +12,7 @@ const server = app.listen(port, () => {
     console.log(`Listening at port localhost:${port}`);
 });
 
-const gun = Gun({ file: path.join(__dirname, "db/data"), web: server });
+const gun = Gun({  web: server });
 var cont = 0;
 
 gun.on("in", (msg) => {
